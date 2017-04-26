@@ -1,0 +1,4 @@
+Registers Location Picker
+===
+
+WIP.
