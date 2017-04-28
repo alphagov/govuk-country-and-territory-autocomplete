@@ -37,16 +37,16 @@ Copy both files to your application. The `location-picker-graph.json` file must 
 The `location-picker-canonical-list.json` file contains an array of arrays containing the location names and ISO codes:
 
 ```js
-> JSON.parse(fs.readFileSync('data/location-picker-canonical-list.json'))
-[["Abu Dhabi", "AE-AZ"], ["Afghanistan", "AF"], …]
+> JSON.parse(fs.readFileSync('data/location-picker-canonical-list.json', 'utf8'))
+[["Abu Dhabi", "territory:AE-AZ"], ["Afghanistan", "country:AF"], …]
 ```
 
 You should parse this file on your application's server or as part of the build process to produce a plain HTML `<select>` dropdown. This is your progressive enhancement fallback. You should render something that looks like this:
 
 ```html
 <select id="location-picker">
-  <option value="AE-AZ">Abu Dhabi</option>
-  <option value="AF">Afghanistan</option>
+  <option value="territory:AE-AZ">Abu Dhabi</option>
+  <option value="country:AF">Afghanistan</option>
   …
 </select>
 ```
