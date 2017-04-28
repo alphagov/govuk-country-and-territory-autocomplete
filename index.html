@@ -341,6 +341,14 @@
     <script type="text/javascript" src="https://unpkg.com/openregister-picker-engine@0.2.0"></script>
     <script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
     <script type="text/javascript">
+      var selectElement = document.getElementById('default')
+      var dataFilePath = 'data/location-picker-graph.json'
+
+      function onSelect (result) {
+        var requestedOption = Array.prototype.filter.call(selectElement.options, function (o) { return o.innerHTML === result.name })[0]
+        if (requestedOption) { requestedOption.selected = true }
+      }
+
       function inputValueTemplate (result) {
         return result && result.name
       }
@@ -352,10 +360,11 @@
         return result && '<strong>' + result.name + '</strong>' + path
       }
 
-      var dataFilePath = 'data/location-picker-graph.json'
       AccessibleTypeahead.enhanceSelectElement({
-        selectElement: document.getElementById('default'),
+        autoselect: true,
+        selectElement: selectElement,
         minLength: 2,
+        onSelect: onSelect,
         source: openregisterPickerEngine(dataFilePath),
         templates: {
           inputValue: inputValueTemplate,

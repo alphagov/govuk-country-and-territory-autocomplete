@@ -65,19 +65,30 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 <script type="text/javascript" src="https://unpkg.com/registers-picker-engine@0.2.0"></script>
 <script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
 <script type="text/javascript">
+  var selectElement = document.getElementById('location-picker')
+  var dataFilePath = 'data/location-picker-graph.json'
+
+  function onSelect (result) {
+    var requestedOption = Array.prototype.filter.call(selectElement.options, function (o) { return o.innerHTML === result.name })[0]
+    if (requestedOption) { requestedOption.selected = true }
+  }
+
   function inputValueTemplate (result) {
     return result && result.name
   }
 
   function suggestionTemplate (result) {
-    var path = result && result.path ? ' (' + result.path + ')' : ''
+    var path = result && result.path
+      ? ' (' + result.path + ')'
+      : ''
     return result && '<strong>' + result.name + '</strong>' + path
   }
 
-  var dataFilePath = 'data/location-picker-graph.json'
   AccessibleTypeahead.enhanceSelectElement({
-    selectElement: document.getElementById('location-picker'),
+    autoselect: true,
+    selectElement: selectElement,
     minLength: 2,
+    onSelect: onSelect,
     source: openregisterPickerEngine(dataFilePath),
     templates: {
       inputValue: inputValueTemplate,
