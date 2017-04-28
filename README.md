@@ -1,4 +1,4 @@
-Registers Location Picker
+Openregister Location Picker
 ===
 
 WIP.
