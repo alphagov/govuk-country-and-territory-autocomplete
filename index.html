@@ -338,14 +338,29 @@
         </select>
       </div>
     </main>
-    <script type="text/javascript" src="https://unpkg.com/registers-picker-engine@0.0.2"></script>
+    <script type="text/javascript" src="https://unpkg.com/openregister-picker-engine@0.2.0"></script>
     <script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
     <script type="text/javascript">
+      function inputValueTemplate (result) {
+        return result && result.name
+      }
+
+      function suggestionTemplate (result) {
+        var path = result && result.path
+          ? ' (' + result.path + ')'
+          : ''
+        return result && '<strong>' + result.name + '</strong>' + path
+      }
+
       var dataFilePath = 'data/location-picker-graph.json'
       AccessibleTypeahead.enhanceSelectElement({
         selectElement: document.getElementById('default'),
         minLength: 2,
-        source: locationPickerSuggestions(dataFilePath)
+        source: openregisterPickerEngine(dataFilePath),
+        templates: {
+          inputValue: inputValueTemplate,
+          suggestion: suggestionTemplate
+        }
       })
     </script>
   </body>
