@@ -57,6 +57,7 @@
       <label for="default">Select your country</label>
       <div id="default-container" class="autocomplete-wrapper">
         <select id="default">
+          <option disabled selected>Pick an option</option>
           <option value="territory:AE-AZ">Abu Dhabi</option>
           <option value="country:AF">Afghanistan</option>
           <option value="territory:AE-AJ">Ajman</option>
@@ -318,7 +319,7 @@
           <option value="country:UA">Ukraine</option>
           <option value="territory:AE-UQ">Umm al-Quwain</option>
           <option value="country:AE">United Arab Emirates</option>
-          <option value="country:GB" selected>United Kingdom</option>
+          <option value="country:GB">United Kingdom</option>
           <option value="country:US">United States</option>
           <option value="territory:VI">United States Virgin Islands</option>
           <option value="country:UY">Uruguay</option>
@@ -362,7 +363,6 @@
 
       AccessibleTypeahead.enhanceSelectElement({
         autoselect: true,
-        defaultValue: 'United Kingdom',
         selectElement: selectElement,
         minLength: 2,
         onSelect: onSelect,
