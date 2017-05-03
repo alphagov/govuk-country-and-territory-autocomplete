@@ -59,11 +59,11 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 
 ```html
 <!-- In your <head> -->
-<link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.4.1/examples/styled.css" />
+<link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.4.2/examples/styled.css" />
 
 <!-- At the end of your <body> -->
-<script type="text/javascript" src="https://unpkg.com/registers-picker-engine@0.2.0"></script>
-<script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.1"></script>
+<script type="text/javascript" src="https://unpkg.com/openregister-picker-engine@1.0.0"></script>
+<script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.2"></script>
 <script type="text/javascript">
   var selectElement = document.getElementById('location-picker')
   var dataFilePath = 'data/location-picker-graph.json'
@@ -96,7 +96,6 @@ On the page where you're rendering the previous `<select>` dropdown, include the
     }
   })
 </script>
-
 ```
 
 This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a typeahead when JavaScript kicks in. When the user selects something in the typeahead, the hidden `<select>` menu is still updated, so everything works as before.
