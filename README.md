@@ -14,7 +14,7 @@ This guide will show you how to:
 
 Contact the registers team at [registerteam@digital.cabinet-office.gov.uk](registerteam@digital.cabinet-office.gov.uk) if you have any problems or questions that are not covered in this guide.
 
-[Try out the index.html example!](index.html)
+[Try out the example!](https://alphagov.github.io/openregister-location-picker/)
 
 ## Before you start
 
@@ -101,7 +101,7 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 
 This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a typeahead when JavaScript kicks in. When the user selects something in the typeahead, the hidden `<select>` menu is still updated, so everything works as before.
 
-[Try out the index.html example!](index.html)
+[Try out the index.html example!](https://alphagov.github.io/openregister-location-picker/)
 
 ## Support and troubleshooting
 
