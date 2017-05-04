@@ -34,6 +34,18 @@ To use register data in the picker, you will need two files:
 
 Copy both files to your application. The `location-picker-graph.json` file must be exposed as a public asset.
 
+You can also install the location picker using `npm`:
+
+```bash
+$ npm install openregister-location-picker
+$ ls node_modules/openregister-location-picker/dist/
+location-picker-canonical-list.json
+location-picker-graph.json
+location-picker.min.css
+location-picker.min.js
+location-picker.min.js.map
+```
+
 The `location-picker-canonical-list.json` file contains an array of arrays containing the location names and ISO codes:
 
 ```js
@@ -55,45 +67,18 @@ You should parse this file on your application's server or as part of the build 
 
 To make it easier for users to find a location using the picker, you should progressively enhance the front-end to add auto-complete functionality. As a user types, the picker will suggest a list of possible locations for the user to choose from.
 
-On the page where you're rendering the previous `<select>` dropdown, include the following HTML:
+On the page where you're rendering the previous `<select>` dropdown, include the following HTML, updating the `/assets/` URLs as needed for your application:
 
 ```html
 <!-- In your <head> -->
-<link rel="stylesheet" href="https://unpkg.com/accessible-typeahead@0.4.2/examples/styled.css" />
+<link rel="stylesheet" href="/assets/location-picker.min.css" />
 
 <!-- At the end of your <body> -->
-<script type="text/javascript" src="https://unpkg.com/openregister-picker-engine@1.0.0"></script>
-<script type="text/javascript" src="https://unpkg.com/accessible-typeahead@0.4.2"></script>
+<script type="text/javascript" src="/assets/location-picker.min.js"></script>
 <script type="text/javascript">
-  var selectElement = document.getElementById('location-picker')
-  var dataFilePath = 'data/location-picker-graph.json'
-
-  function onSelect (result) {
-    var requestedOption = Array.prototype.filter.call(selectElement.options, function (o) { return o.innerHTML === result.name })[0]
-    if (requestedOption) { requestedOption.selected = true }
-  }
-
-  function inputValueTemplate (result) {
-    return result && result.name
-  }
-
-  function suggestionTemplate (result) {
-    var path = result && result.path
-      ? ' (' + result.path + ')'
-      : ''
-    return result && '<strong>' + result.name + '</strong>' + path
-  }
-
-  AccessibleTypeahead.enhanceSelectElement({
-    autoselect: true,
-    selectElement: selectElement,
-    minLength: 2,
-    onSelect: onSelect,
-    source: openregisterPickerEngine(dataFilePath),
-    templates: {
-      inputValue: inputValueTemplate,
-      suggestion: suggestionTemplate
-    }
+  openregisterLocationPicker({
+    selectElement: document.getElementById('location-picker'),
+    url: '/assets/location-picker-graph.json'
   })
 </script>
 ```
