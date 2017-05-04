@@ -1,0 +1,39 @@
+{
+  "name": "openregister-location-picker",
+  "version": "0.0.0",
+  "main": "dist/location-picker.min.js",
+  "description": "An autocomplete widget that uses data from the openregister.",
+  "repository": "git@github.com:alphagov/openregister-location-picker.git",
+  "author": "Theodor Vararu <theodor.vararu@digital.cabinet-office.gov.uk>",
+  "license": "MIT",
+  "keywords": [
+    "country",
+    "location",
+    "openregister",
+    "picker",
+    "territory"
+  ],
+  "scripts": {
+    "prebuild": "cp node_modules/accessible-typeahead/dist/styled.min.css dist/location-picker.min.css",
+    "build": "cross-env NODE_ENV=production webpack -p --progress --display-modules",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "postversion": "git push && git push --tags",
+    "version": "npm run build && git add -A dist"
+  },
+  "dependencies": {
+    "accessible-typeahead": "^0.4.2",
+    "openregister-picker-engine": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "replace-bundle-webpack-plugin": "^1.0.0",
+    "source-map-loader": "^0.2.1",
+    "v8-lazy-parse-webpack-plugin": "^0.3.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-visualizer-plugin": "^0.1.11"
+  }
+}
