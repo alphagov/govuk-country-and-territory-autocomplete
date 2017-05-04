@@ -14,7 +14,7 @@ This guide will show you how to:
 
 Contact the registers team at [registerteam@digital.cabinet-office.gov.uk](registerteam@digital.cabinet-office.gov.uk) if you have any problems or questions that are not covered in this guide.
 
-[Try out the example!](https://alphagov.github.io/openregister-location-picker/)
+[Try out the example!](https://alphagov.github.io/openregister-location-picker/examples/)
 
 ## Before you start
 
@@ -29,8 +29,8 @@ To integrate an application with the picker, you will need to:
 ### Add location data from country and territory registers
 
 To use register data in the picker, you will need two files:
-* [location-picker-canonical-list.json](data/location-picker-canonical-list.json) - a list of every canonical country and territory
-* [location-picker-graph.json](data/location-picker-graph.json) - a directed acyclic graph mapping canonical locations to abbreviations, synonyms, endonyms, and typos
+* [location-picker-canonical-list.json](dist/location-picker-canonical-list.json) - a list of every canonical country and territory
+* [location-picker-graph.json](dist/location-picker-graph.json) - a directed acyclic graph mapping canonical locations to abbreviations, synonyms, endonyms, and typos
 
 Copy both files to your application. The `location-picker-graph.json` file must be exposed as a public asset.
 
@@ -100,7 +100,7 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 
 This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a typeahead when JavaScript kicks in. When the user selects something in the typeahead, the hidden `<select>` menu is still updated, so everything works as before.
 
-[Try out the index.html example!](https://alphagov.github.io/openregister-location-picker/)
+[Try out the index.html example!](https://alphagov.github.io/openregister-location-picker/examples/)
 
 ## Support and troubleshooting
 
