@@ -1,8 +1,8 @@
-# Openregister Location Picker
+# Location picker - what it is and how to use it
 
-The location picker is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality, to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
+The location picker is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
 
-The picker uses data from the UK government's Country and Territory registers. To configure the data used in the picker to suit the specific needs of your product or service, please contact the registers team at [registerteam@digital.cabinet-office.gov.uk](registerteam@digital.cabinet-office.gov.uk).
+The picker uses data from the UK government's country and territory registers. To configure the data used in the picker to suit the specific needs of your product or service, please [contact the registers team](https://registers.cloudapps.digital/support).
 
 The picker itself follows the common look and feel of GOV.UK in line with the [design principles](https://www.gov.uk/design-principles).
 
@@ -10,19 +10,19 @@ The picker itself follows the common look and feel of GOV.UK in line with the [d
 
 This guide will show you how to:
 * populate the picker's autocomplete field
-* use and the picker's data file
+* use the picker's data file
 
-Contact the registers team at [registerteam@digital.cabinet-office.gov.uk](registerteam@digital.cabinet-office.gov.uk) if you have any problems or questions that are not covered in this guide.
+[Contact the registers team](https://registers.cloudapps.digital/support) if you have any problems or questions that are not covered in this guide.
 
-[Try out the example!](https://alphagov.github.io/openregister-location-picker/examples/)
+[Try out the example:](https://alphagov.github.io/openregister-location-picker/)
 
 ## Before you start
 
-This guide assumes you have a service that outputs HTML. It makes some choices for you with respect to which data is passed back and persisted to your service. Please [contact the registers team](registerteam@digital.cabinet-office.gov.uk) to discuss your requirements.
+This guide assumes you have a service that outputs HTML. It makes some choices for you with respect to which data is passed back and persisted to your service. Please [contact the registers team](https://registers.cloudapps.digital/support) to discuss your requirements.
 
 ## Integration process
 
-To integrate an application with the picker, you will need to:
+To integrate an application with the picker, you'll need to:
 * use the data from the country and territory registers
 * create an accessible autocomplete widget
 
@@ -31,6 +31,8 @@ To integrate an application with the picker, you will need to:
 To use register data in the picker, you will need two files:
 * [location-picker-canonical-list.json](dist/location-picker-canonical-list.json) - a list of every canonical country and territory
 * [location-picker-graph.json](dist/location-picker-graph.json) - a directed acyclic graph mapping canonical locations to abbreviations, synonyms, endonyms, and typos
+
+The `location-picker-graph.json` file only contains examples of synonyms, abbreviations, endonyms and typos you might want to consider. It is not a comprehensive list. You may wish to add or remove items based on your own user research.
 
 Copy both files to your application. The `location-picker-graph.json` file must be exposed as a public asset.
 
@@ -89,19 +91,15 @@ This will render the same `<select>` menu as before on the server, but hides it 
 
 ## Support and troubleshooting
 
-GDS maintains the platform behind registers and creates widgets such as the location picker to make it easier for service teams to use register data.
+Government Digital Service (GDS) maintains the platform behind registers and creates widgets such as the location picker to make it easier for service teams to use register data.
 
 Contact GDS if you want to use the picker, but your needs differ from what is covered in this guide.
 
-GDS provides operational support from 09:00 - 17:00 Monday-Friday.
-
-Contact the GDS registers team at [registerteam@digital.cabinet-office.gov.uk](registerteam@digital.cabinet-office.gov.uk) if you have any problems or questions that are not covered in this guide. Please include screenshots if useful.
+[Contact the GDS registers team](https://registers.cloudapps.digital/support) if you have any problems or questions that are not covered in this guide. Please include screenshots if useful. GDS provides operational support from 09:00 - 17:00 Monday-Friday.
 
 You can also raise an issue against this repository if you prefer.
 
 ## Glossary
-
-country -
 
 country register - A list of British English-language names and descriptive terms for countries.
 
