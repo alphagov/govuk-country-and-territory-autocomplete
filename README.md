@@ -14,7 +14,7 @@ This guide will show you how to:
 
 [Contact the registers team](https://registers.cloudapps.digital/support) if you have any problems or questions that are not covered in this guide.
 
-[Try out the example:](https://alphagov.github.io/openregister-location-picker/)
+[Try out the example.](https://alphagov.github.io/openregister-location-picker/)
 
 ## Before you start
 
