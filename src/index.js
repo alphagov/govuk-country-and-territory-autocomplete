@@ -28,7 +28,7 @@ function openregisterLocationPicker (opts) {
   opts.minLength = opts.minLength || 2
 
   opts.onSelect = opts.onSelect || ((result) => {
-    var requestedOption = Array.prototype.filter.call(opts.selectElement.options, o => o.innerHTML === result && result.name)[0]
+    var requestedOption = Array.prototype.filter.call(opts.selectElement.options, o => o.innerText === result.name)[0]
     if (requestedOption) { requestedOption.selected = true }
   })
 
