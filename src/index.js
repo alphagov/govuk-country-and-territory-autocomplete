@@ -14,8 +14,6 @@ function suggestionTemplate (result) {
 
 function openregisterLocationPicker (opts) {
   // Set defaults.
-  opts.autoselect = opts.autoselect || true
-
   opts.fallback = opts.fallback || ((query, syncResults) => {
     const availableOptions = Array.prototype.map.call(opts.selectElement.options, o => o.innerHTML)
     const filteredResults = query
@@ -27,7 +25,7 @@ function openregisterLocationPicker (opts) {
 
   opts.minLength = opts.minLength || 2
 
-  opts.onSelect = opts.onSelect || ((result) => {
+  opts.onConfirm = opts.onConfirm || ((result) => {
     var requestedOption = Array.prototype.filter.call(opts.selectElement.options, o => o.innerText === (result && result.name))[0]
     if (requestedOption) { requestedOption.selected = true }
   })

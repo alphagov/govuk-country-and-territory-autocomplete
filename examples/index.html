@@ -57,7 +57,7 @@
       <label for="default">Select your country</label>
       <div id="default-container" class="autocomplete-wrapper">
         <select id="default">
-          <option disabled selected>Pick an option</option>
+          <option value="" disabled selected>Pick an option</option>
           <option value="territory:AE-AZ">Abu Dhabi</option>
           <option value="country:AF">Afghanistan</option>
           <option value="territory:AE-AJ">Ajman</option>
@@ -342,6 +342,7 @@
     <script type="text/javascript" src="../dist/location-picker.min.js"></script>
     <script type="text/javascript">
       openregisterLocationPicker({
+        defaultValue: '',
         selectElement: document.getElementById('default'),
         url: '../dist/location-picker-graph.json'
       })
