@@ -13,6 +13,12 @@ accepts@~1.3.3:
     mime-types "~2.1.11"
     negotiator "0.6.1"
 
+accessible-autocomplete@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/accessible-autocomplete/-/accessible-autocomplete-1.2.0.tgz#8f01bbc393a242fd0ad3d9f35093c7e897ddbfcc"
+  dependencies:
+    preact "^8.1.0"
+
 accessible-typeahead@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/accessible-typeahead/-/accessible-typeahead-0.4.2.tgz#9acf25689124fbd1e89b1572e0d7a115c35f6809"
@@ -2214,6 +2220,10 @@ portfinder@^1.0.9:
 preact@^6.0.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/preact/-/preact-6.4.0.tgz#1b8c99754b002639a1c33e68175eefa98a01cc14"
+
+preact@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-8.1.0.tgz#f035b808eebb74e46d56246b02ca0f190b6d6574"
 
 preserve@^0.2.0:
   version "0.2.0"

@@ -1,4 +1,4 @@
-import {enhanceSelectElement} from 'accessible-typeahead'
+import {enhanceSelectElement} from 'accessible-autocomplete'
 import openregisterPickerEngine from 'openregister-picker-engine'
 
 function inputValueTemplate (result) {
