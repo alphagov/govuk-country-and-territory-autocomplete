@@ -4,6 +4,10 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.2.0 - 2017-05-23
+
+- Use `accessible-autocomplete@v1.2.0`.
+
 ## 0.1.0 - 2017-05-18
 
 - Fix the `onSelect` handler to work correctly in real forms. By [@revilossor](https://github.com/revilossor).
