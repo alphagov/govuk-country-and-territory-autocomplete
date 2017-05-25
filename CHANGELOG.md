@@ -4,6 +4,10 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.2.1 - 2017-05-25
+
+- Use `accessible-autocomplete@v1.2.1`.
+
 ## 0.2.0 - 2017-05-23
 
 - Use `accessible-autocomplete@v1.2.0`.
