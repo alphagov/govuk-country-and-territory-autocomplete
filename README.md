@@ -1,6 +1,7 @@
 # Location picker - what it is and how to use it
 
 [![Build Status](https://travis-ci.org/alphagov/openregister-location-picker.svg?branch=master)](https://travis-ci.org/alphagov/openregister-location-picker)
+[![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/openregister-location-picker.svg)](https://greenkeeper.io/)
 
 The location picker is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
 
