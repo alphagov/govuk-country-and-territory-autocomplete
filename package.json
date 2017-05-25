@@ -21,7 +21,7 @@
     "version": "npm run build && git add -A dist"
   },
   "dependencies": {
-    "accessible-autocomplete": "^1.2.0",
+    "accessible-autocomplete": "^1.2.1",
     "openregister-picker-engine": "^1.0.0"
   },
   "devDependencies": {
