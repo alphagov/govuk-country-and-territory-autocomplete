@@ -1,5 +1,7 @@
 # Location picker - what it is and how to use it
 
+[![Build Status](https://travis-ci.org/alphagov/openregister-location-picker.svg?branch=master)](https://travis-ci.org/alphagov/openregister-location-picker)
+
 The location picker is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
 
 The picker uses data from the UK government's country and territory registers. To configure the data used in the picker to suit the specific needs of your product or service, please [contact the registers team](https://registers.cloudapps.digital/support).
