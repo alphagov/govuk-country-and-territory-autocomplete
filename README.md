@@ -67,7 +67,7 @@ You should parse this file on your application's server or as part of the build 
 </select>
 ```
 
-### Create accessible typeahead widget
+### Create an accessible autocomplete widget
 
 To make it easier for users to find a location using the picker, you should progressively enhance the front-end to add auto-complete functionality. As a user types, the picker will suggest a list of possible locations for the user to choose from.
 
@@ -87,7 +87,7 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 </script>
 ```
 
-This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a typeahead when JavaScript kicks in. When the user selects something in the typeahead, the hidden `<select>` menu is still updated, so everything works as before.
+This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a autocomplete when JavaScript kicks in. When the user selects something in the autocomplete, the hidden `<select>` menu is still updated, so everything works as before.
 
 [If you prefer to learn by reading the source, try out the example.](https://alphagov.github.io/openregister-location-picker/examples/)
 
