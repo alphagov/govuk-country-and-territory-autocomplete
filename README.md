@@ -28,6 +28,7 @@ This guide assumes you have a service that outputs HTML. It makes some choices f
 To integrate an application with the picker, you'll need to:
 * use the data from the country and territory registers
 * create an accessible autocomplete widget
+* keep the data up to date
 
 ### Add location data from country and territory registers
 
@@ -91,6 +92,15 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a autocomplete when JavaScript kicks in. When the user selects something in the autocomplete, the hidden `<select>` menu is still updated, so everything works as before.
 
 [If you prefer to learn by reading the source, try out the example.](https://alphagov.github.io/openregister-location-picker/examples/)
+
+## Keep the data up to date
+
+Government Digital Service will publish new versions of the `openregister-location-picker` package when the data changes, such as when countries are renamed.
+
+To keep up to date, you can use dependency monitoring tools, such as:
+
+- [Greenkeeper](https://greenkeeper.io/), a GitHub bot that will submit pull requests to your open source project when there are new versions of your dependencies
+- [David](https://www.npmjs.com/package/david), a command line tool that can be configured to run on your continuous integration environment and return a non-zero status when there are new versions of your dependencies
 
 ## Support and troubleshooting
 
