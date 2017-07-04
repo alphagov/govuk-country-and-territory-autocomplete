@@ -9,6 +9,15 @@ yarn
 yarn dev
 ```
 
+## Updating data
+
+```bash
+./scripts/fetch-latest-data-file.sh
+git add dist/location-picker-graph.json
+git commit -am "Update data file"
+git push
+```
+
 ## Cutting a new release
 
 ```bash
