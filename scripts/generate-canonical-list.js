@@ -1,4 +1,4 @@
-const graph = require('../dist/location-picker-graph.json')
+const graph = require('../tmp/location-picker-graph.json')
 
 const result = Object.keys(graph)
   .filter((key) => {
@@ -19,4 +19,4 @@ const result = Object.keys(graph)
     }
   })
 
-console.log(JSON.stringify(result))
+console.log(JSON.stringify(result, null, 2))
