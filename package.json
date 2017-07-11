@@ -30,6 +30,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "cross-env": "^5.0.0",
+    "json-stable-stringify": "^1.0.1",
     "replace-bundle-webpack-plugin": "^1.0.0",
     "source-map-loader": "^0.2.1",
     "v8-lazy-parse-webpack-plugin": "^0.3.0",
