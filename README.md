@@ -93,6 +93,31 @@ This will render the same `<select>` menu as before on the server, but hides it 
 
 [If you prefer to learn by reading the source, try out the example.](https://alphagov.github.io/openregister-location-picker/examples/)
 
+### Adding additional synonyms
+
+You can pass in custom synonyms using the [`additionalSynonyms` option](https://github.com/alphagov/openregister-picker-engine#optionsadditionalsynonyms):
+
+```html
+<script type="text/javascript">
+  openregisterLocationPicker({
+    additionalSynonyms: [
+      { name: 'Albion', code: 'country:GB' }
+    ],
+    selectElement: document.getElementById('location-picker'),
+    url: '/assets/location-picker-graph.json'
+  })
+</script>
+```
+
+You can additionally specify custom synonyms on the `<option>` elements by using the `data-additional-synonyms` attribute:
+
+```html
+<select id="location-picker">
+  <option value="territory:GB" data-additional-synonyms='["Blighty"]'>United Kingdom</option>
+  <option value="country:RO" data-additional-synonyms='["Dacia"]'>Romania</option>
+</select>
+```
+
 ## Keep the data up to date
 
 Government Digital Service will publish new versions of the `openregister-location-picker` package when the data changes, such as when countries are renamed.
