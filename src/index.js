@@ -29,20 +29,24 @@ function openregisterLocationPicker (opts) {
     var requestedOption = Array.prototype.filter.call(opts.selectElement.options, o => o.innerText === (result && result.name))[0]
     if (requestedOption) { requestedOption.selected = true }
   })
-  
+
   const optionsWithAdditionalSynonyms = Array.prototype
     .filter.call(opts.selectElement.options, option => option.dataset && option.dataset.additionalSynonyms)
   const htmlAdditionalSynonyms = optionsWithAdditionalSynonyms
+    // => [<HtmlOption value="country:GB" data-additional-synonyms="['Albion', 'Blighty']">, ...]
     .map(option => ({ code: option.value, synonyms: option.dataset.additionalSynonyms }))
-    .reduce((allSynonyms, currentSet) => {
-      const moreSynonyms = JSON.parse(currentSet.synonyms)
-        .map(synonymName => ({ name: synonymName, code: currentSet.code }))
-      return allSynonyms.concat(moreSynonyms)
+    // => [{ code: 'country:GB', synonyms: "['Albion', 'Blighty']" }, ...]
+    .reduce((additionalSynonymsArray, additionalSynonymsSet) => {
+      const additionalSynonymsSeparated = JSON.parse(additionalSynonymsSet.synonyms)
+        .map(synonymName => ({ name: synonymName, code: additionalSynonymsSet.code }))
+      return additionalSynonymsArray.concat(additionalSynonymsSeparated)
     }, [])
+    // => [{ code: 'country:GB', name: 'Albion' }, { code: 'country:GB', name: 'Blighty' }, ...]
 
   opts.additionalSynonyms = (opts.additionalSynonyms || []).concat(htmlAdditionalSynonyms)
 
   opts.source = opts.source || openregisterPickerEngine({
+    additionalEntries: opts.additionalEntries,
     additionalSynonyms: opts.additionalSynonyms,
     url: opts.url,
     fallback: opts.fallback

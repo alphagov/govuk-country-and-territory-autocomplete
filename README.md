@@ -93,13 +93,16 @@ This will render the same `<select>` menu as before on the server, but hides it 
 
 [If you prefer to learn by reading the source, try out the example.](https://alphagov.github.io/openregister-location-picker/examples/)
 
-### Adding additional synonyms
+### Adding additional entries and synonyms
 
-You can pass in custom synonyms using the [`additionalSynonyms` option](https://github.com/alphagov/openregister-picker-engine#optionsadditionalsynonyms):
+You can pass in custom entries and synonyms using the [`additionalEntries` and `additionalSynonyms` option](https://github.com/alphagov/openregister-picker-engine#optionsadditionalentries):
 
 ```html
 <script type="text/javascript">
   openregisterLocationPicker({
+    additionalEntries: [
+      { name: 'Atlantis', code: 'country:AN' }
+    ],
     additionalSynonyms: [
       { name: 'Albion', code: 'country:GB' }
     ],
