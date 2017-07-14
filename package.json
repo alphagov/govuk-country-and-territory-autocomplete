@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "accessible-autocomplete": "^1.4.1",
-    "openregister-picker-engine": "^1.1.0"
+    "openregister-picker-engine": "^1.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
