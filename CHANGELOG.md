@@ -4,6 +4,8 @@
 
 _(add items here for easier creation of next log entry)_
 
+- [Feature] Add support for custom entries and synonyms.
+
 ## 0.3.0 - 2017-07-11
 
 - Use `accessible-autocomplete@v1.4.1`.
