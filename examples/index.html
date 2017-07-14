@@ -257,7 +257,7 @@
           <option value="territory:PR">Puerto Rico</option>
           <option value="country:QA">Qatar</option>
           <option value="territory:AE-RK">Ras al-Khaimah</option>
-          <option value="country:RO">Romania</option>
+          <option value="country:RO" data-additional-synonyms='["Dacia"]'>Romania</option>
           <option value="country:RU">Russia</option>
           <option value="country:RW">Rwanda</option>
           <option value="territory:RE">Réunion</option>
@@ -342,6 +342,9 @@
     <script type="text/javascript" src="../dist/location-picker.min.js"></script>
     <script type="text/javascript">
       openregisterLocationPicker({
+        additionalSynonyms: [
+          { name: 'Albion', code: 'country:GB' }
+        ],
         defaultValue: '',
         selectElement: document.getElementById('default'),
         url: '../dist/location-picker-graph.json'
