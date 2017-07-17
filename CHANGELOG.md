@@ -4,6 +4,8 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.3.1 - 2017-07-17
+
 - [Feature] Add support for custom entries and synonyms.
 
 ## 0.3.0 - 2017-07-11
