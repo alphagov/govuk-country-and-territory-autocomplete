@@ -1,6 +1,6 @@
 {
   "name": "openregister-location-picker",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "dist/location-picker.min.js",
   "description": "An autocomplete widget that uses data from the openregister.",
   "repository": "git@github.com:alphagov/openregister-location-picker.git",
