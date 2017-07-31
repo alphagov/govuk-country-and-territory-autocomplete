@@ -110,6 +110,7 @@ module.exports = {
     ],
     watchContentBase: true,
     historyApiFallback: true,
-    open: true
+    open: true,
+    disableHostCheck: true
   }
 }
