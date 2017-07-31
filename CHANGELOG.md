@@ -4,6 +4,10 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.3.2 - 2017-07-31
+
+- Fix IE10 incompatibility by pulling in latest version of openregister-picker-engine.
+
 ## 0.3.1 - 2017-07-17
 
 - [Feature] Add support for custom entries and synonyms.
