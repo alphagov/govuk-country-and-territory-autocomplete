@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "accessible-autocomplete": "^1.4.1",
-    "openregister-picker-engine": "^1.2.0"
+    "openregister-picker-engine": "^1.2.1",
+    "webpack-sources": "^1.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
