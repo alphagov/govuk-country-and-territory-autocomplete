@@ -91,7 +91,7 @@ On the page where you're rendering the previous `<select>` dropdown, include the
 
 This will render the same `<select>` menu as before on the server, but hides it and progressively enhances to a autocomplete when JavaScript kicks in. When the user selects something in the autocomplete, the hidden `<select>` menu is still updated, so everything works as before.
 
-[If you prefer to learn by reading the source, try out the example.](https://alphagov.github.io/openregister-location-picker/examples/)
+[If you prefer to learn by reading the source, try out the example.](https://alphagov.github.io/govuk-country-and-territory-autocomplete/examples/)
 
 ### Adding additional entries and synonyms
 
