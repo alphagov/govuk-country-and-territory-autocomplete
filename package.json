@@ -1,10 +1,10 @@
 {
-  "name": "openregister-location-picker",
+  "name": "govuk-country-and-territory-autocomplete",
   "version": "0.3.2",
   "main": "dist/location-picker.min.js",
-  "description": "An autocomplete widget that uses data from the openregister.",
-  "repository": "git@github.com:alphagov/openregister-location-picker.git",
-  "author": "Theodor Vararu <theodor.vararu@digital.cabinet-office.gov.uk>",
+  "description": "An autocomplete widget that uses data from the GOV.UK Registers.",
+  "repository": "git@github.com:alphagov/govuk-country-and-territory-autocomplete.git",
+  "author": "GOV.UK Registers <registerteam@digital.cabinet-office.gov.uk>",
   "license": "MIT",
   "keywords": [
     "country",
