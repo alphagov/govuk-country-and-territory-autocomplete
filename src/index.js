@@ -12,6 +12,16 @@ function suggestionTemplate (result) {
   return result && '<strong>' + result.name + '</strong>' + path
 }
 
+function initGoogleAnalytics () {
+  ga('create', {
+    trackingId: 'UA-90200549-4',
+    cookieDomain: '_gaCookieLocationPickerComponent',
+    name: 'openregisterLocationPicker',
+  });
+
+  ga("set", "anonymizeIp", true);
+}
+
 function openregisterLocationPicker (opts) {
   // Set defaults.
   opts.fallback = opts.fallback || ((query, syncResults) => {
@@ -58,6 +68,10 @@ function openregisterLocationPicker (opts) {
   }
 
   enhanceSelectElement(opts)
+
+  if (!opts.disableGoogleAnalytics) {
+    initGoogleAnalytics()
+  }
 }
 
 module.exports = openregisterLocationPicker
