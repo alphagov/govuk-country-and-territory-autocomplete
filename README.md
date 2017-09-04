@@ -43,8 +43,8 @@ Copy both files to your application. The `location-picker-graph.json` file must 
 You can also install the location autocomplete using `npm`:
 
 ```bash
-$ npm install govuk-country-and-territory-autocomplete
-$ ls node_modules/govuk-country-and-territory-autocomplete/dist/
+$ npm install openregister-location-picker
+$ ls node_modules/openregister-location-picker/dist/
 location-picker-canonical-list.json
 location-picker-graph.json
 location-picker.min.css
