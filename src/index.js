@@ -12,7 +12,8 @@ function suggestionTemplate (result) {
   return result && '<strong>' + result.name + '</strong>' + path
 }
 
-function initGoogleAnalytics () {
+// If enabled, this function provides the GOV.UK Registers team with information about your hostname in order to track the component's usage
+function initGoogleAnalyticsTracking () {
   ga('create', {
     trackingId: 'UA-90200549-4',
     cookieDomain: '_gaCookieLocationPickerComponent',
@@ -69,8 +70,8 @@ function openregisterLocationPicker (opts) {
 
   enhanceSelectElement(opts)
 
-  if (!opts.disableGoogleAnalytics) {
-    initGoogleAnalytics()
+  if (opts.allowAdoptionTracking) {
+    initGoogleAnalyticsTracking()
   }
 }
 
