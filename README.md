@@ -153,3 +153,23 @@ register - A list of information designed to be an accurate and up-to-date sourc
 territory - An administrative or geographical entity that isn't recognised as a country by the UK.
 
 territory register - A list of British English-language names and descriptive terms for political, administrative and geographical entities that aren’t recognised as countries by the UK.
+
+## Tracking
+
+We use Google Analytics software to collect information about how your users interact with this component. We do this to help make sure the component is meeting the needs of its users and to help us make improvements.
+
+The Google Analytics cookie we set stores information about:
+
+- how many users enter country data using the component the hostname of the service which the component is implemented within
+
+We don’t collect or store you or your users' personal information (for example your name or address) so this information can’t be used to identify who you are.
+
+We don’t allow Google to use or share our analytics data.
+
+We've renamed this cookie to [add cookie name] so it won't clash with any Google Analytics cookies you set yourself to monitor your service.
+
+If you're happy for this cookie to be placed in your service, you'll need to let your users know about this clearly and may need to update your cookie policy. We suggest adding some wording like the below:
+
+One or more of the parts of this service were designed and built by the Government Digital Service (GDS). We may also send Google Analytics cookie data to GDS so that they can monitor and improve those parts of the service.
+
+If you'd prefer not to place this cookie in your service, you can take it out by setting before disableGoogleAnalytics: "true"; in your initialiser.

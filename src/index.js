@@ -12,6 +12,17 @@ function suggestionTemplate (result) {
   return result && '<strong>' + result.name + '</strong>' + path
 }
 
+// If enabled, this function provides the GOV.UK Registers team with information about your hostname in order to track the component's usage
+function initGoogleAnalyticsTracking () {
+  ga('create', {
+    trackingId: 'UA-90200549-4',
+    cookieDomain: '_gaCookieLocationPickerComponent',
+    name: 'openregisterLocationPicker',
+  });
+
+  ga("set", "anonymizeIp", true);
+}
+
 function openregisterLocationPicker (opts) {
   // Set defaults.
   opts.fallback = opts.fallback || ((query, syncResults) => {
@@ -58,6 +69,10 @@ function openregisterLocationPicker (opts) {
   }
 
   enhanceSelectElement(opts)
+
+  if (opts.allowAdoptionTracking) {
+    initGoogleAnalyticsTracking()
+  }
 }
 
 module.exports = openregisterLocationPicker
