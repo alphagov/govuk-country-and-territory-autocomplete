@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'location-picker.min.js',
+    filename: 'location-autocomplete.min.js',
     library: 'openregisterLocationPicker',
     libraryTarget: 'umd'
   },
@@ -106,7 +106,7 @@ module.exports = {
     publicPath: '/dist/',
     contentBase: [
       './examples',
-      './' // So that ../dist/location-picker-graph.json maps to the same file both with dev server and without.
+      './' // So that ../dist/location-autocomplete-graph.json maps to the same file both with dev server and without.
     ],
     watchContentBase: true,
     historyApiFallback: true,

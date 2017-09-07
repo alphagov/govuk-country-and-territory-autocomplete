@@ -1,7 +1,7 @@
 {
   "name": "govuk-country-and-territory-autocomplete",
   "version": "0.3.2",
-  "main": "dist/location-picker.min.js",
+  "main": "dist/location-autocomplete.min.js",
   "description": "An autocomplete widget that uses data from the GOV.UK Registers.",
   "repository": "git@github.com:alphagov/govuk-country-and-territory-autocomplete.git",
   "author": "GOV.UK Registers <registerteam@digital.cabinet-office.gov.uk>",
@@ -10,13 +10,13 @@
     "country",
     "location",
     "openregister",
-    "picker",
+    "autocomplete",
     "territory"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --progress --display-modules",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
-    "prebuild": "cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css dist/location-picker.min.css",
+    "prebuild": "cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css dist/location-autocomplete.min.css",
     "test": "npm run build",
     "version": "npm run build && git add -A dist"
   },

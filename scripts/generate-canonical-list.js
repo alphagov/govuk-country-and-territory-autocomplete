@@ -1,4 +1,4 @@
-const graph = require('../tmp/location-picker-graph.json')
+const graph = require('../tmp/location-autocomplete-graph.json')
 
 const result = Object.keys(graph)
   .filter((key) => {
