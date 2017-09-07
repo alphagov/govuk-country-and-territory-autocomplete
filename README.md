@@ -9,7 +9,7 @@ The autocomplete uses data from the UK government's country and territory regist
 
 The autocomplete itself follows the common look and feel of GOV.UK in line with the [design principles](https://www.gov.uk/design-principles).
 
-![A screenshot of the new country and territory autocomplete](docs/location-picker-general.gif)
+![A screenshot of the new country and territory autocomplete](docs/location-autocomplete-general.gif)
 
 This guide will show you how to:
 * populate the autocomplete field
@@ -33,29 +33,29 @@ To integrate an application with the autocomplete, you'll need to:
 ### Add location data from country and territory registers
 
 To use register data in the autocomplete, you will need two files:
-* [location-picker-canonical-list.json](dist/location-picker-canonical-list.json) - a list of every canonical country and territory
-* [location-picker-graph.json](dist/location-picker-graph.json) - a directed acyclic graph mapping canonical locations to abbreviations, synonyms, endonyms, and typos
+* [location-autocomplete-canonical-list.json](dist/location-autocomplete-canonical-list.json) - a list of every canonical country and territory
+* [location-autocomplete-graph.json](dist/location-autocomplete-graph.json) - a directed acyclic graph mapping canonical locations to abbreviations, synonyms, endonyms, and typos
 
-The `location-picker-graph.json` file only contains examples of synonyms, abbreviations, endonyms and typos you might want to consider. It is not a comprehensive list. You may wish to add or remove items based on your own user research.
+The `location-autocomplete-graph.json` file only contains examples of synonyms, abbreviations, endonyms and typos you might want to consider. It is not a comprehensive list. You may wish to add or remove items based on your own user research.
 
-Copy both files to your application. The `location-picker-graph.json` file must be exposed as a public asset.
+Copy both files to your application. The `location-autocomplete-graph.json` file must be exposed as a public asset.
 
 You can also install the location autocomplete using `npm`:
 
 ```bash
-$ npm install openregister-location-picker
-$ ls node_modules/openregister-location-picker/dist/
-location-picker-canonical-list.json
-location-picker-graph.json
-location-picker.min.css
-location-picker.min.js
-location-picker.min.js.map
+$ npm install govuk-country-and-territory-autocomplete
+$ ls node_modules/openregister-location-autocomplete/dist/
+location-autocomplete-canonical-list.json
+location-autocomplete-graph.json
+location-autocomplete.min.css
+location-autocomplete.min.js
+location-autocomplete.min.js.map
 ```
 
-The `location-picker-canonical-list.json` file contains an array of arrays containing the location names and ISO codes:
+The `location-autocomplete-canonical-list.json` file contains an array of arrays containing the location names and ISO codes:
 
 ```js
-> JSON.parse(fs.readFileSync('data/location-picker-canonical-list.json', 'utf8'))
+> JSON.parse(fs.readFileSync('data/location-autocomplete-canonical-list.json', 'utf8'))
 [["Abu Dhabi", "territory:AE-AZ"], ["Afghanistan", "country:AF"], …]
 ```
 
@@ -71,20 +71,20 @@ You should parse this file on your application's server or as part of the build 
 
 ### Create an accessible autocomplete widget
 
-To make it easier for users to find a location using the picker, you should progressively enhance the front-end to add auto-complete functionality. As a user types, the picker will suggest a list of possible locations for the user to choose from.
+To make it easier for users to find a location using the autocomplete, you should progressively enhance the front-end to add auto-complete functionality. As a user types, the autocomplete will suggest a list of possible locations for the user to choose from.
 
 On the page where you're rendering the previous `<select>` dropdown, include the following HTML, updating the `/assets/` URLs as needed for your application:
 
 ```html
 <!-- In your <head> -->
-<link rel="stylesheet" href="/assets/location-picker.min.css" />
+<link rel="stylesheet" href="/assets/location-autocomplete.min.css" />
 
 <!-- At the end of your <body> -->
-<script type="text/javascript" src="/assets/location-picker.min.js"></script>
+<script type="text/javascript" src="/assets/location-autocomplete.min.js"></script>
 <script type="text/javascript">
   openregisterLocationPicker({
     selectElement: document.getElementById('location-autocomplete'),
-    url: '/assets/location-picker-graph.json'
+    url: '/assets/location-autocomplete-graph.json'
   })
 </script>
 ```
@@ -95,7 +95,7 @@ This will render the same `<select>` menu as before on the server, but hides it 
 
 ### Adding additional entries and synonyms
 
-You can pass in custom entries and synonyms using the [`additionalEntries` and `additionalSynonyms` option](https://github.com/alphagov/openregister-picker-engine#optionsadditionalentries):
+You can pass in custom entries and synonyms using the [`additionalEntries` and `additionalSynonyms` option](https://github.com/alphagov/openregister-autocomplete-engine#optionsadditionalentries):
 
 ```html
 <script type="text/javascript">
@@ -106,8 +106,8 @@ You can pass in custom entries and synonyms using the [`additionalEntries` and `
     additionalSynonyms: [
       { name: 'Albion', code: 'country:GB' }
     ],
-    selectElement: document.getElementById('location-picker'),
-    url: '/assets/location-picker-graph.json'
+    selectElement: document.getElementById('location-autocomplete'),
+    url: '/assets/location-autocomplete-graph.json'
   })
 </script>
 ```
@@ -115,7 +115,7 @@ You can pass in custom entries and synonyms using the [`additionalEntries` and `
 You can additionally specify custom synonyms on the `<option>` elements by using the `data-additional-synonyms` attribute:
 
 ```html
-<select id="location-picker">
+<select id="location-autocomplete">
   <option value="territory:GB" data-additional-synonyms='["Blighty"]'>United Kingdom</option>
   <option value="country:RO" data-additional-synonyms='["Dacia"]'>Romania</option>
 </select>
@@ -132,9 +132,9 @@ To keep up to date, you can use dependency monitoring tools, such as:
 
 ## Support and troubleshooting
 
-Government Digital Service (GDS) maintains the platform behind registers and creates widgets such as the location picker to make it easier for service teams to use register data.
+Government Digital Service (GDS) maintains the platform behind registers and creates widgets such as the location autocomplete to make it easier for service teams to use register data.
 
-Contact GDS if you want to use the picker, but your needs differ from what is covered in this guide.
+Contact GDS if you want to use the autocomplete, but your needs differ from what is covered in this guide.
 
 [Contact the GOV.UK Registers team](https://registers.cloudapps.digital/support) if you have any problems or questions that are not covered in this guide. Please include screenshots if useful. GDS provides operational support from 09:00 - 17:00 Monday-Friday.
 

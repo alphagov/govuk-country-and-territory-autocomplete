@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Openregister Location Picker</title>
-    <link rel="stylesheet" href="../dist/location-picker.min.css" />
+    <title>GOV.UK country and territory autocomplete</title>
+    <link rel="stylesheet" href="../dist/location-autocomplete.min.css" />
     <style>
       html {
         color: #111;
@@ -37,7 +37,7 @@
       }
 
       main {
-        max-width: 40em;
+        max-width: 25em;
         margin-left: auto;
         margin-right: auto;
       }
@@ -50,7 +50,7 @@
   </head>
   <body>
     <main>
-      <h1>Openregister Location Picker</h1>
+      <h1>GOV.UK country and territory autocomplete</h1>
 
       <h2>Basic example</h2>
       <p>This illustrates basic usage.</p>
@@ -339,7 +339,7 @@
         </select>
       </div>
     </main>
-    <script type="text/javascript" src="../dist/location-picker.min.js"></script>
+    <script type="text/javascript" src="../dist/location-autocomplete.min.js"></script>
     <script type="text/javascript">
       openregisterLocationPicker({
         additionalSynonyms: [
@@ -347,7 +347,7 @@
         ],
         defaultValue: '',
         selectElement: document.getElementById('default'),
-        url: '../dist/location-picker-graph.json'
+        url: '../dist/location-autocomplete-graph.json'
       })
     </script>
   </body>

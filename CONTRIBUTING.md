@@ -13,7 +13,7 @@ yarn dev
 
 ```bash
 ./scripts/fetch-latest-data-file.sh
-git add dist/location-picker-graph.json
+git add dist/location-autocomplete-graph.json
 git commit -am "Update data file"
 git push
 ```
@@ -33,7 +33,7 @@ npm version <major|minor|patch> -m "## 1.2.3 - 2017-01-13
 git push --tags --set-upstream origin refs/heads/v1.2.3:refs/heads/v1.2.3
 ```
 
-To actually publish, you will need access to an `npm` account that owns `openregister-location-picker`. Merge the version PR and then run:
+To actually publish, you will need access to an `npm` account that owns `openregister-location-autocomplete`. Merge the version PR and then run:
 
 ```bash
 git checkout master
