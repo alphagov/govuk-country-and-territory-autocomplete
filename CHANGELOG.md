@@ -4,6 +4,11 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.4.0 - 2017-09-26
+
+- Rename from picker to autocomplete since this is built on [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete).
+- Use `accessible-autocomplete@v1.6.1`.
+
 ## 0.3.2 - 2017-07-31
 
 - Fix IE10 incompatibility by pulling in latest version of openregister-picker-engine.
