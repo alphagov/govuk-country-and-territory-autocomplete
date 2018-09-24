@@ -4,6 +4,8 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.5.0 - 2018-09-24
+
 - Pull in latest register data.
 
 ## 0.4.0 - 2017-09-26
