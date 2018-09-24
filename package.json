@@ -23,19 +23,19 @@
   "dependencies": {
     "accessible-autocomplete": "^1.6.1",
     "openregister-picker-engine": "^1.2.1",
-    "webpack-sources": "^1.0.1"
+    "webpack-sources": "^1.3.0"
   },
   "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
-    "cross-env": "^5.0.0",
+    "cross-env": "^5.2.0",
     "json-stable-stringify": "^1.0.1",
     "replace-bundle-webpack-plugin": "^1.0.0",
-    "source-map-loader": "^0.2.1",
+    "source-map-loader": "^0.2.4",
     "v8-lazy-parse-webpack-plugin": "^0.3.0",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.5",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.3",
     "webpack-visualizer-plugin": "^0.1.11"
   }
 }
