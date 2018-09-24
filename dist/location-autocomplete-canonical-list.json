@@ -324,6 +324,10 @@
     "country:EE"
   ],
   [
+    "Eswatini",
+    "country:SZ"
+  ],
+  [
     "Ethiopia",
     "country:ET"
   ],
@@ -942,10 +946,6 @@
   [
     "Svalbard and Jan Mayen",
     "territory:SJ"
-  ],
-  [
-    "Swaziland",
-    "country:SZ"
   ],
   [
     "Sweden",

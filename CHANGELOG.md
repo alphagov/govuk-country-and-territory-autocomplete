@@ -4,6 +4,8 @@
 
 _(add items here for easier creation of next log entry)_
 
+- Pull in latest register data.
+
 ## 0.4.0 - 2017-09-26
 
 - Rename from picker to autocomplete since this is built on [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete).
