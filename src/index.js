@@ -6,7 +6,7 @@ function inputValueTemplate (result) {
 }
 
 function suggestionTemplate (result) {
-  const path = result && result.path
+  const path = result && result.path && result.path !== result.name
     ? ' (' + result.path + ')'
     : ''
   return result && '<strong>' + result.name + '</strong>' + path
