@@ -14,28 +14,43 @@
     "territory"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p --progress --display-modules",
+    "build": "cross-env NODE_ENV=production webpack --progress --display-modules",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "prebuild": "cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css dist/location-autocomplete.min.css",
     "test": "npm run build",
     "version": "npm run build && git add -A dist"
   },
   "dependencies": {
-    "accessible-autocomplete": "^1.6.1",
+    "accessible-autocomplete": "^1.6.2",
     "openregister-picker-engine": "^1.2.1",
     "webpack-sources": "^1.3.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-transform-member-expression-literals": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/plugin-transform-property-literals": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
     "cross-env": "^5.2.0",
     "json-stable-stringify": "^1.0.1",
     "replace-bundle-webpack-plugin": "^1.0.0",
     "source-map-loader": "^0.2.4",
-    "v8-lazy-parse-webpack-plugin": "^0.3.0",
-    "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.11.3",
-    "webpack-visualizer-plugin": "^0.1.11"
-  }
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.25.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "browserslist": [
+    ">0.1%",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "last 2 Samsung versions",
+    "Safari >= 9",
+    "ie 8-11",
+    "iOS >= 9"
+  ]
 }

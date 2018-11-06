@@ -60,4 +60,4 @@ function openregisterLocationPicker (opts) {
   enhanceSelectElement(opts)
 }
 
-module.exports = openregisterLocationPicker
+export default openregisterLocationPicker

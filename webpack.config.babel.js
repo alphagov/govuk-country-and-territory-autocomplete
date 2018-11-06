@@ -1,19 +1,45 @@
 import webpack from 'webpack'
-import ReplacePlugin from 'replace-bundle-webpack-plugin'
 import path from 'path'
-import V8LazyParseWebpackPlugin from 'v8-lazy-parse-webpack-plugin'
-import WebpackVisualizerPlugin from 'webpack-visualizer-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 const ENV = process.env.NODE_ENV || 'development'
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './index.js',
+
+  optimization: {
+    minimize: ENV === 'production',
+    minimizer: [new UglifyJsPlugin({
+      cache: true,
+      parallel: true,
+      sourceMap: true,
+      uglifyOptions: {
+        compress: {
+          negate_iife: false,
+          properties: false,
+          ie8: true
+        },
+        mangle: {
+          ie8: true
+        },
+        output: {
+          comments: false,
+          ie8: true
+        }
+      }
+    })]
+  },
+
+  entry: {
+    'location-autocomplete.min': './index.js'
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'location-autocomplete.min.js',
+    filename: '[name].js',
     library: 'openregisterLocationPicker',
+    libraryExport: 'default',
     libraryTarget: 'umd'
   },
 
@@ -46,46 +72,11 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(ENV)
     }),
-    new WebpackVisualizerPlugin()
-  ]).concat(ENV === 'production' ? [
-    new V8LazyParseWebpackPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      compress: {
-        unsafe_comps: true,
-        properties: true,
-        keep_fargs: false,
-        pure_getters: true,
-        collapse_vars: true,
-        unsafe: true,
-        warnings: false,
-        screw_ie8: true,
-        sequences: true,
-        dead_code: true,
-        drop_debugger: true,
-        comparisons: true,
-        conditionals: true,
-        evaluate: true,
-        booleans: true,
-        loops: true,
-        unused: true,
-        hoist_funs: true,
-        if_return: true,
-        join_vars: true,
-        cascade: true,
-        drop_console: true
-      }
-    }),
-
-    // strip out babel-helper invariant checks
-    new ReplacePlugin([{
-      // this is actually the property name https://github.com/kimhou/replace-bundle-webpack-plugin/issues/1
-      partten: /throw\s+(new\s+)?[a-zA-Z]+Error\s*\(/g,
-      replacement: () => 'return;('
-    }])
-  ] : []),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false
+    })
+  ]),
 
   stats: { colors: true },
 
@@ -98,6 +89,7 @@ module.exports = {
     setImmediate: false
   },
 
+  mode: ENV === 'production' ? 'production' : 'development',
   devtool: ENV === 'production' ? 'source-map' : 'cheap-module-eval-source-map',
 
   devServer: {
