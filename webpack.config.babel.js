@@ -102,7 +102,7 @@ module.exports = {
 
   devServer: {
     port: process.env.PORT || 8080,
-    host: 'localhost',
+    host: '0.0.0.0',
     publicPath: '/dist/',
     contentBase: [
       './examples',
