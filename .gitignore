@@ -1,4 +1,4 @@
 node_modules
 *.log
-dist/stats.html
+dist/report.html
 tmp
