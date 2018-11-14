@@ -4,6 +4,10 @@
 
 _(add items here for easier creation of next log entry)_
 
+## 0.5.1 - 2018-11-14
+
+- Package updates and fixes - many thanks to @colinrotherham for his hard work :)
+
 ## 0.5.0 - 2018-09-24
 
 - Pull in latest register data.
