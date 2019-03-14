@@ -584,10 +584,6 @@
     "territory:MO"
   ],
   [
-    "Macedonia",
-    "country:MK"
-  ],
-  [
     "Madagascar",
     "country:MG"
   ],
@@ -726,6 +722,10 @@
   [
     "North Korea",
     "country:KP"
+  ],
+  [
+    "North Macedonia",
+    "country:MK"
   ],
   [
     "Northern Mariana Islands",
