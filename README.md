@@ -153,3 +153,12 @@ register - A list of information designed to be an accurate and up-to-date sourc
 territory - An administrative or geographical entity that isn't recognised as a country by the UK.
 
 territory register - A list of British English-language names and descriptive terms for political, administrative and geographical entities that aren’t recognised as countries by the UK.
+
+## Releasing
+
+* Update CHANGELOG
+* Update package.json
+* `npm version`
+* Merge to master
+* Create GitHub release tag
+* `npm publish`
