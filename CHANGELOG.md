@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 - Pull in latest register data.
+- update dependencies
 
 ## 0.5.1 - 2018-11-14
 
