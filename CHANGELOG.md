@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [Unreleased]
+## 0.5.2 - 2019-03-18
 
 - Pull in latest register data.
 - update dependencies
