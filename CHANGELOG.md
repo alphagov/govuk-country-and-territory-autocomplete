@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-_(add items here for easier creation of next log entry)_
+- Pull in latest register data.
 
 ## 0.5.1 - 2018-11-14
 
