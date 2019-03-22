@@ -10,14 +10,7 @@ yarn dev
 ```
 
 ## Updating data
-
-```bash
-./scripts/fetch-latest-data-file.sh
-git add dist/location-autocomplete-graph.json
-git add dist/location-canonical-list.json
-git commit -am "Update data file"
-git push
-```
+See [updating](./docs/updating.md)
 
 ## Cutting a new release
 
