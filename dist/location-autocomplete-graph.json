@@ -1884,7 +1884,7 @@
     },
     "names": {
       "cy": false,
-      "en-GB": "Burma"
+      "en-GB": "Myanmar (Burma)"
     }
   },
   "country:MN": {
@@ -12839,23 +12839,6 @@
       "en-GB": "Myanma"
     }
   },
-  "nym:Myanmar": {
-    "edges": {
-      "from": [
-        "country:MM"
-      ]
-    },
-    "meta": {
-      "canonical": false,
-      "canonical-mask": 0,
-      "display-name": false,
-      "stable-name": false
-    },
-    "names": {
-      "cy": false,
-      "en-GB": "Myanmar"
-    }
-  },
   "nym:México": {
     "edges": {
       "from": [
@@ -22578,23 +22561,6 @@
     "names": {
       "cy": false,
       "en-GB": "Union of Soviet Socialist Republics"
-    }
-  },
-  "nym:Union of burma": {
-    "edges": {
-      "from": [
-        "country:MM"
-      ]
-    },
-    "meta": {
-      "canonical": false,
-      "canonical-mask": 0,
-      "display-name": false,
-      "stable-name": false
-    },
-    "names": {
-      "cy": false,
-      "en-GB": "Union of burma"
     }
   },
   "nym:Union of the Comoros": {
