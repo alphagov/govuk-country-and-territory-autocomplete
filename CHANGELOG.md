@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Unreleased
+
+- [Pull request #56: Updates country Burma to Myanmar (Burma)](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/56)
+
 ## 0.5.2 - 2019-03-18
 
 - Pull in latest register data.
