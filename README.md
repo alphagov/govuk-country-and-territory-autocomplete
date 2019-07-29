@@ -5,7 +5,7 @@
 
 The GOV.UK country and territory autocomplete  is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
 
-The autocomplete uses data from the UK government's country and territory registers. To configure the data used in the autocomplete to suit the specific needs of your product or service, please [contact the registers team](https://registers.cloudapps.digital/support).
+The autocomplete uses data from the UK government's country and territory registers. To configure the data used in the autocomplete to suit the specific needs of your product or service, please [raise an issue](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/new).
 
 The autocomplete itself follows the common look and feel of GOV.UK in line with the [design principles](https://www.gov.uk/design-principles).
 
@@ -15,13 +15,7 @@ This guide will show you how to:
 * populate the autocomplete field
 * use the autocomplete's data file
 
-[Contact the registers team](https://registers.cloudapps.digital/support) if you have any problems or questions that are not covered in this guide.
-
 [Try out the example.](https://alphagov.github.io/govuk-country-and-territory-autocomplete/examples/)
-
-## Before you start
-
-This guide assumes you have a service that outputs HTML. It makes some choices for you with respect to which data is passed back and persisted to your service. Please [contact the registers team](https://registers.cloudapps.digital/support) to discuss your requirements.
 
 ## Integration process
 
@@ -129,16 +123,6 @@ To keep up to date, you can use dependency monitoring tools, such as:
 
 - [Greenkeeper](https://greenkeeper.io/), a GitHub bot that will submit pull requests to your open source project when there are new versions of your dependencies
 - [David](https://www.npmjs.com/package/david), a command line tool that can be configured to run on your continuous integration environment and return a non-zero status when there are new versions of your dependencies
-
-## Support and troubleshooting
-
-Government Digital Service (GDS) maintains the platform behind registers and creates widgets such as the location autocomplete to make it easier for service teams to use register data.
-
-Contact GDS if you want to use the autocomplete, but your needs differ from what is covered in this guide.
-
-[Contact the GOV.UK Registers team](https://registers.cloudapps.digital/support) if you have any problems or questions that are not covered in this guide. Please include screenshots if useful. GDS provides operational support from 09:00 - 17:00 Monday-Friday.
-
-You can also raise an issue against this repository if you prefer.
 
 ## Glossary
 
