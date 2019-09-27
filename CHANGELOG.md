@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- [Pull request #60: Upgrade to `accessible-autocomplete@2.0.0`](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/60)
+
+See notes on https://github.com/alphagov/accessible-autocomplete/releases/tag/v2.0.0 due to breaking changes (now using GOV.UK Design System WCAG 2.1 compatible CSS)
+
 ## 0.5.3 - 2019-07-29
 
 - [Pull request #56: Updates country Burma to Myanmar (Burma)](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/56)
