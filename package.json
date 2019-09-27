@@ -21,7 +21,8 @@
     "version": "npm run build && git add -A dist"
   },
   "dependencies": {
-    "accessible-autocomplete": "^1.6.2",
+    "accessible-autocomplete": "^2.0.0",
+    "core-js": "3",
     "openregister-picker-engine": "^1.2.1",
     "webpack-sources": "^1.3.0"
   },
@@ -33,7 +34,7 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "cross-env": "^5.2.0",
+    "cross-env": "^6.0.0",
     "json-stable-stringify": "^1.0.1",
     "replace-bundle-webpack-plugin": "^1.0.0",
     "source-map-loader": "^0.2.4",
