@@ -5,8 +5,8 @@ Contributions welcome, please raise a pull request.
 To develop locally:
 
 ```bash
-yarn
-yarn dev
+npm install
+npm run dev
 ```
 
 ## Updating data
