@@ -7,6 +7,7 @@
 ### Breaking changes
 
 - [Pull request #60: Upgrade to `accessible-autocomplete@2.0.0`](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/60)
+- [Pull request #63: Upgrade to `accessible-autocomplete@2.0.1`](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/63)
 
 See notes on https://github.com/alphagov/accessible-autocomplete/releases/tag/v2.0.0 due to breaking changes (now using GOV.UK Design System WCAG 2.1 compatible CSS)
 
