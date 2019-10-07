@@ -10,7 +10,7 @@ Changes to the Country and Territory registers need to be reflected in the data 
 *You can see an example of a data update Pull Request in: https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/51*
 
 ## Testing changes
-* `yarn dev`
+* `npm run dev`
 * Go to: http://localhost:8080
 * Check that your changes are reflected in the autocomplete
 

@@ -1,6 +1,6 @@
 {
   "name": "govuk-country-and-territory-autocomplete",
-  "version": "0.5.3",
+  "version": "1.0.0",
   "main": "dist/location-autocomplete.min.js",
   "description": "An autocomplete widget that uses data from the GOV.UK Registers.",
   "repository": "git@github.com:alphagov/govuk-country-and-territory-autocomplete.git",
@@ -21,7 +21,7 @@
     "version": "npm run build && git add -A dist"
   },
   "dependencies": {
-    "accessible-autocomplete": "^2.0.0",
+    "accessible-autocomplete": "^2.0.1",
     "core-js": "3",
     "openregister-picker-engine": "^1.2.1",
     "webpack-sources": "^1.3.0"
