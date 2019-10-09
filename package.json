@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "accessible-autocomplete": "^2.0.1",
-    "core-js": "3",
+    "core-js": "3.2.1",
     "openregister-picker-engine": "^1.2.1",
     "webpack-sources": "^1.3.0"
   },
