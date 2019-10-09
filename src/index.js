@@ -2,10 +2,16 @@ import {enhanceSelectElement} from 'accessible-autocomplete'
 import openregisterPickerEngine from 'openregister-picker-engine'
 
 function inputValueTemplate (result) {
+  if (typeof result === 'string') {
+    return result
+  }
   return result && result.name
 }
 
 function suggestionTemplate (result) {
+  if (typeof result === 'string') {
+    return '<strong>' + result + '</strong>'
+  }
   const path = result && result.path
     ? ' (' + result.path + ')'
     : ''
