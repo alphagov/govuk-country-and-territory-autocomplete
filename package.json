@@ -1,6 +1,6 @@
 {
   "name": "govuk-country-and-territory-autocomplete",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/location-autocomplete.min.js",
   "description": "An autocomplete widget that uses data from the GOV.UK Registers.",
   "repository": "git@github.com:alphagov/govuk-country-and-territory-autocomplete.git",
