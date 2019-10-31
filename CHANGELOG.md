@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.0.1 - 2019-10-31
+
 ### Fixes
 
 - [Pull request #66: Fix preselected values causing undefined errors](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/66)
