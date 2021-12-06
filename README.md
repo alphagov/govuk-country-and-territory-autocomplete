@@ -1,5 +1,13 @@
 # GOV.UK country and territory autocomplete - what it is and how to use it
 
+---
+
+**This component is not currently maintained and we are unable to respond to issues and pull requests.**
+
+You can still raise issues or pull requests if you want to. As soon as we’re able to, we’ll prioritise dealing with security updates and any bugs that have been raised by people in the UK public sector. We cannot prioritise adding new features.
+
+---
+
 [![Build Status](https://travis-ci.com/alphagov/govuk-country-and-territory-autocomplete.svg?branch=master)](https://travis-ci.org/alphagov/govuk-country-and-territory-autocomplete)
 [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk-country-and-territory-autocomplete.svg)](https://greenkeeper.io/)
 
