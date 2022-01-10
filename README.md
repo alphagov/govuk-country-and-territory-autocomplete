@@ -46,7 +46,7 @@ You can also install the location autocomplete using `npm`:
 
 ```bash
 $ npm install govuk-country-and-territory-autocomplete
-$ ls node_modules/openregister-location-autocomplete/dist/
+$ ls node_modules/govuk-country-and-territory-autocomplete/dist/
 location-autocomplete-canonical-list.json
 location-autocomplete-graph.json
 location-autocomplete.min.css
