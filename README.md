@@ -151,6 +151,6 @@ territory register - A list of British English-language names and descriptive te
 * Update CHANGELOG
 * Update package.json
 * `npm version`
-* Merge to master
+* Merge to `main`
 * Create GitHub release tag
 * `npm publish`
