@@ -8,7 +8,7 @@ You can still raise issues or pull requests if you want to. As soon as we’re a
 
 ---
 
-[![Build Status](https://travis-ci.com/alphagov/govuk-country-and-territory-autocomplete.svg?branch=master)](https://travis-ci.org/alphagov/govuk-country-and-territory-autocomplete)
+[![Build Status](https://travis-ci.com/alphagov/govuk-country-and-territory-autocomplete.svg?branch=main)](https://travis-ci.org/alphagov/govuk-country-and-territory-autocomplete)
 [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk-country-and-territory-autocomplete.svg)](https://greenkeeper.io/)
 
 The GOV.UK country and territory autocomplete  is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
@@ -151,6 +151,6 @@ territory register - A list of British English-language names and descriptive te
 * Update CHANGELOG
 * Update package.json
 * `npm version`
-* Merge to master
+* Merge to `main`
 * Create GitHub release tag
 * `npm publish`

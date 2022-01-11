@@ -14,7 +14,7 @@ See [updating](./docs/updating.md)
 
 ## Cutting a new release
 
-`git pull --rebase` on `master` and then run:
+`git pull --rebase` on `main` and then run:
 
 ```bash
 git checkout -b "v1.2.3"
@@ -30,7 +30,7 @@ git push --tags --set-upstream origin refs/heads/v1.2.3:refs/heads/v1.2.3
 To actually publish, you will need access to an `npm` account that owns `govuk-country-and-territory-autocomplete`. Merge the version PR and then run:
 
 ```bash
-git checkout master
+git checkout main
 git pull --rebase
 npm publish
 ```
