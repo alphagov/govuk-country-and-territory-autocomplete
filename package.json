@@ -14,7 +14,7 @@
     "territory"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --progress --display-modules",
+    "build": "cross-env NODE_ENV=production webpack --progress",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "prebuild": "cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css dist/location-autocomplete.min.css",
     "test": "npm run build",
@@ -39,7 +39,7 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^3.1.10"
   },
   "browserslist": [
