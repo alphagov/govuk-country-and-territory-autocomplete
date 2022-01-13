@@ -80,14 +80,15 @@ module.exports = {
   devServer: {
     port: process.env.PORT || 8080,
     host: '0.0.0.0',
-    publicPath: '/dist/',
-    contentBase: [
+    devMiddleware: {
+      publicPath: '/dist/'
+    },
+    static: [
       './examples',
       './' // So that ../dist/location-autocomplete-graph.json maps to the same file both with dev server and without.
     ],
-    watchContentBase: true,
     historyApiFallback: true,
     open: true,
-    disableHostCheck: true
+    allowedHosts: 'all'
   }
 }

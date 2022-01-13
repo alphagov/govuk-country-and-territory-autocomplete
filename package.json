@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --progress",
     "prebuild": "cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css dist/location-autocomplete.min.css",
     "test": "npm run build",
     "version": "npm run build && git add -A dist"
@@ -40,7 +40,7 @@
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^4.7.3"
   },
   "browserslist": [
     ">0.1%",
