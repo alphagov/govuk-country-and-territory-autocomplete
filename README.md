@@ -15,7 +15,7 @@ The GOV.UK country and territory autocomplete  is a simple UI widget that allows
 
 The autocomplete uses data from the UK government's country and territory registers. To configure the data used in the autocomplete to suit the specific needs of your product or service, please [raise an issue](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/new).
 
-The autocomplete itself follows the common look and feel of GOV.UK in line with the [design principles](https://www.gov.uk/design-principles).
+The autocomplete itself follows the common look and feel of GOV.UK in line with the [design principles](https://www.gov.uk/design-principles), and should work with [recommended browsers](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices#browsers-to-test-in) and [assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies#which-assistive-technologies-to-test-with).
 
 ![A screenshot of the new country and territory autocomplete](docs/location-autocomplete-general.gif)
 
