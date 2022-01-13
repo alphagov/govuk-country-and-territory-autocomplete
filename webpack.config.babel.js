@@ -27,28 +27,19 @@ module.exports = {
           ie8: true
         }
       }
-    })]
+    })],
+    noEmitOnErrors: true
   },
 
-  entry: {
-    'location-autocomplete.min': './index.js'
-  },
+  entry: './index.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js',
+    filename: 'location-autocomplete.min.js',
     library: 'openregisterLocationPicker',
     libraryExport: 'default',
     libraryTarget: 'umd'
-  },
-
-  resolve: {
-    extensions: ['.js'],
-    modules: [
-      path.resolve(__dirname, 'node_modules'),
-      'node_modules'
-    ]
   },
 
   module: {
@@ -68,17 +59,11 @@ module.exports = {
   },
 
   plugins: ([
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(ENV)
-    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
     })
   ]),
-
-  stats: { colors: true },
 
   node: {
     global: true,
