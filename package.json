@@ -35,7 +35,6 @@
     "babel-loader": "^8.0.4",
     "cross-env": "^6.0.0",
     "json-stable-stringify": "^1.0.1",
-    "replace-bundle-webpack-plugin": "^1.0.0",
     "source-map-loader": "^0.2.4",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.25.1",
