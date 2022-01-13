@@ -28,7 +28,7 @@ module.exports = {
         }
       }
     })],
-    noEmitOnErrors: true
+    emitOnErrors: false
   },
 
   entry: './index.js',
@@ -67,15 +67,12 @@ module.exports = {
 
   node: {
     global: true,
-    process: false,
-    Buffer: false,
     __filename: false,
-    __dirname: false,
-    setImmediate: false
+    __dirname: false
   },
 
   mode: ENV === 'production' ? 'production' : 'development',
-  devtool: ENV === 'production' ? 'source-map' : 'cheap-module-eval-source-map',
+  devtool: ENV === 'production' ? 'source-map' : 'eval-cheap-module-source-map',
 
   devServer: {
     port: process.env.PORT || 8080,
