@@ -14,8 +14,8 @@
     "territory"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --progress --display-modules",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "build": "cross-env NODE_ENV=production webpack --progress",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --progress",
     "prebuild": "cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css dist/location-autocomplete.min.css",
     "test": "npm run build",
     "version": "npm run build && git add -A dist"
@@ -23,8 +23,7 @@
   "dependencies": {
     "accessible-autocomplete": "^2.0.1",
     "core-js": "3.2.1",
-    "openregister-picker-engine": "^1.2.1",
-    "webpack-sources": "^1.3.0"
+    "openregister-picker-engine": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
@@ -33,16 +32,15 @@
     "@babel/plugin-transform-property-literals": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/register": "^7.0.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.2.3",
     "cross-env": "^6.0.0",
     "json-stable-stringify": "^1.0.1",
-    "replace-bundle-webpack-plugin": "^1.0.0",
-    "source-map-loader": "^0.2.4",
-    "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.25.1",
-    "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "source-map-loader": "^3.0.1",
+    "terser-webpack-plugin": "^5.3.0",
+    "webpack": "^5.66.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
   },
   "browserslist": [
     ">0.1%",

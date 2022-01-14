@@ -1,7 +1,7 @@
 import webpack from 'webpack'
 import path from 'path'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
 const ENV = process.env.NODE_ENV || 'development'
 
 module.exports = {
@@ -9,11 +9,9 @@ module.exports = {
 
   optimization: {
     minimize: ENV === 'production',
-    minimizer: [new UglifyJsPlugin({
-      cache: true,
+    minimizer: [new TerserPlugin({
       parallel: true,
-      sourceMap: true,
-      uglifyOptions: {
+      terserOptions: {
         compress: {
           negate_iife: false,
           properties: false,
@@ -27,28 +25,19 @@ module.exports = {
           ie8: true
         }
       }
-    })]
+    })],
+    emitOnErrors: false
   },
 
-  entry: {
-    'location-autocomplete.min': './index.js'
-  },
+  entry: './index.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js',
+    filename: 'location-autocomplete.min.js',
     library: 'openregisterLocationPicker',
     libraryExport: 'default',
     libraryTarget: 'umd'
-  },
-
-  resolve: {
-    extensions: ['.js'],
-    modules: [
-      path.resolve(__dirname, 'node_modules'),
-      'node_modules'
-    ]
   },
 
   module: {
@@ -68,41 +57,33 @@ module.exports = {
   },
 
   plugins: ([
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(ENV)
-    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
     })
   ]),
 
-  stats: { colors: true },
-
   node: {
     global: true,
-    process: false,
-    Buffer: false,
     __filename: false,
-    __dirname: false,
-    setImmediate: false
+    __dirname: false
   },
 
   mode: ENV === 'production' ? 'production' : 'development',
-  devtool: ENV === 'production' ? 'source-map' : 'cheap-module-eval-source-map',
+  devtool: ENV === 'production' ? 'source-map' : 'eval-cheap-module-source-map',
 
   devServer: {
     port: process.env.PORT || 8080,
     host: '0.0.0.0',
-    publicPath: '/dist/',
-    contentBase: [
+    devMiddleware: {
+      publicPath: '/dist/'
+    },
+    static: [
       './examples',
       './' // So that ../dist/location-autocomplete-graph.json maps to the same file both with dev server and without.
     ],
-    watchContentBase: true,
     historyApiFallback: true,
     open: true,
-    disableHostCheck: true
+    allowedHosts: 'all'
   }
 }
