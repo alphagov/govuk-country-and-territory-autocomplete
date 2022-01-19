@@ -1,14 +1,10 @@
 # GOV.UK country and territory autocomplete - what it is and how to use it
 
----
+The country and territory autocomplete is a component that helps users choose countries and territories in answers. You should only use this component for services where users have to provide their country or territory.
 
-**This component is not currently maintained and we are unable to respond to issues and pull requests.**
+This component includes complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
 
-You can still raise issues or pull requests if you want to. As soon as we’re able to, we’ll prioritise dealing with security updates and any bugs that have been raised by people in the UK public sector. We cannot prioritise adding new features.
-
----
-
-The GOV.UK country and territory autocomplete  is a simple UI widget that allows end users to find and select a location. It includes auto-complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
+For other types of question, you should use the accessible autocomplete. To find information about this component, go to the [accessible-autocomplete README](https://github.com/alphagov/accessible-autocomplete/blob/main/README.md).
 
 The autocomplete uses data from the UK government's country and territory registers. To configure the data used in the autocomplete to suit the specific needs of your product or service, please [raise an issue](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/new).
 
@@ -21,6 +17,18 @@ This guide will show you how to:
 * use the autocomplete's data file
 
 [Try out the example.](https://alphagov.github.io/govuk-country-and-territory-autocomplete/examples/)
+
+---
+
+## Support
+
+The GOV.UK Design System team maintains the country and territory autocomplete. However, we’re only able to put in minimal work to support it.
+
+[Read about our plans to maintain this component](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/106).
+
+[Read more about the types of support we can provide](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/91).
+
+---
 
 ## Integration process
 
