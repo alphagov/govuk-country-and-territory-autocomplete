@@ -154,8 +154,9 @@ territory register - A list of British English-language names and descriptive te
 ## Releasing
 
 * Update CHANGELOG
-* Update package.json
-* `npm version`
+* Update package.json and increment version number
+* `npm install` to update package-lock.json version number
+* `npm run version` to update dist/
 * Merge to `main`
 * Create GitHub release tag
 * `npm publish`

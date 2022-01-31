@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.0.2 - 2022-01-31
+
+### Fixes
+
+- [Issue #69: Use latest version of accessible-autocomplete (2.0.3) to fix invalid use of span wrapper](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/69) 
+
 ## 1.0.1 - 2019-10-31
 
 ### Fixes
