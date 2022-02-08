@@ -27,10 +27,22 @@ npm version <major|minor|patch> -m "## 1.2.3 - 2017-01-13
 git push --tags --set-upstream origin refs/heads/v1.2.3:refs/heads/v1.2.3
 ```
 
-To actually publish, you will need access to an `npm` account that owns `govuk-country-and-territory-autocomplete`. Merge the version PR and then run:
+Create a pull request for the release and merge once it has been approved, then run:
 
 ```bash
 git checkout main
 git pull --rebase
-npm publish
 ```
+
+### Publish the release
+
+  1. Sign in to npm (`npm login`) using the [npm/govuk-patterns-and-tools team credentials](https://github.com/alphagov/design-system-team-credentials/tree/main/npm/govuk-patterns-and-tools).
+  2. Run `npm publish` to publish to npm.
+  3. Open the ['create a new release' dialog](https://github.com/alphagov/govuk-country-and-territory-autocomplete/releases/new) on GitHub.
+  4. Select the latest tag version.
+  5. Set 'v[VERSION-NUMBER]' as the title.
+  6. Add the release notes from the changelog.
+  7. Add a summary of highlights.
+  8. Select **Publish release**.
+
+You do not need to manually attach source code files to the release on GitHub.
