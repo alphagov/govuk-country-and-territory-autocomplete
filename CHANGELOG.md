@@ -2,7 +2,9 @@
 
 ## Unreleased
 
-### Fixes
+## 2.0.0 - 2024-09-12
+
+### Breaking changes
 
 - [Pull request #125: Update Accessible Autocomplete to v3.0.1](https://github.com/alphagov/govuk-country-and-territory-autocomplete/pull/125)
 
