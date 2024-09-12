@@ -140,15 +140,6 @@ You can additionally specify custom synonyms on the `<option>` elements by using
 </select>
 ```
 
-## Keep the data up to date
-
-Government Digital Service will publish new versions of the `govuk-country-and-territory-autocomplete` package when the data changes, such as when countries are renamed.
-
-To keep up to date, you can use dependency monitoring tools, such as:
-
-- [Greenkeeper](https://greenkeeper.io/), a GitHub bot that will submit pull requests to your open source project when there are new versions of your dependencies
-- [David](https://www.npmjs.com/package/david), a command line tool that can be configured to run on your continuous integration environment and return a non-zero status when there are new versions of your dependencies
-
 ## Glossary
 
 country register - A list of British English-language names and descriptive terms for countries.
