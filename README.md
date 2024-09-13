@@ -1,6 +1,30 @@
-# GOV.UK country and territory autocomplete - what it is and how to use it
+# GOV.UK country and territory autocomplete
 
 The country and territory autocomplete is a component that helps users choose countries and territories in answers. You should only use this component for services where users have to provide their country or territory.
+
+## The GOV.UK country and territory autocomplete is no longer actively maintained
+
+It's recommended that you do not use this component, as:
+* it's only updated to address serious security issues – see the Support section for more information
+* it's highly likely that the country and territory data provided by this component is out of date – the [Openregister picker engine](https://github.com/alphagov/openregister-picker-engine), used to retrieve the country and territory data, is now archived
+
+The GOV.UK Design System Team plan to retire this component in the future.
+
+## Support
+
+The GOV.UK Design System team maintains the country and territory autocomplete. However, we’re only able to put in minimal work to support it.
+
+[Read about our plans to maintain this component](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/106).
+
+[Read more about the types of support we can provide](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/91).
+
+## Alternatives
+
+[The Foreign, Commonwealth & Development Office (FCDO) maintains a list of approved British English-language names for countries and territories](https://www.gov.uk/government/publications/geographical-names-and-information), which could be combined with the [Accessible autocomplete component](https://github.com/alphagov/accessible-autocomplete).
+
+The Design System has not fully verified the combination of these 2 resources. We plan to make a recommendation for service teams in the future as part of retiring the GOV.UK country and territory autocomplete component.
+
+## How to use this component
 
 This component includes complete functionality to make it faster and easier for users to find a location. For example, to select their country of birth or their current location.
 
@@ -17,18 +41,6 @@ This guide will show you how to:
 * use the autocomplete's data file
 
 [Try out the example.](https://alphagov.github.io/govuk-country-and-territory-autocomplete/examples/)
-
----
-
-## Support
-
-The GOV.UK Design System team maintains the country and territory autocomplete. However, we’re only able to put in minimal work to support it.
-
-[Read about our plans to maintain this component](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/106).
-
-[Read more about the types of support we can provide](https://github.com/alphagov/govuk-country-and-territory-autocomplete/issues/91).
-
----
 
 ## Integration process
 
@@ -127,15 +139,6 @@ You can additionally specify custom synonyms on the `<option>` elements by using
   <option value="country:RO" data-additional-synonyms='["Dacia"]'>Romania</option>
 </select>
 ```
-
-## Keep the data up to date
-
-Government Digital Service will publish new versions of the `govuk-country-and-territory-autocomplete` package when the data changes, such as when countries are renamed.
-
-To keep up to date, you can use dependency monitoring tools, such as:
-
-- [Greenkeeper](https://greenkeeper.io/), a GitHub bot that will submit pull requests to your open source project when there are new versions of your dependencies
-- [David](https://www.npmjs.com/package/david), a command line tool that can be configured to run on your continuous integration environment and return a non-zero status when there are new versions of your dependencies
 
 ## Glossary
 
